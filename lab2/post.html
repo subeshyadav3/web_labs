@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post | Subesh's Tech Blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="container">
+        <a href="index.html" class="logo">Subesh<span>.dev</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main class="container single-post">
+    <div class="post-header">
+        <h1 id="post-title"></h1>
+        <p class="post-meta" id="post-category"></p>
+    </div>
+
+    <div class="post-body" id="post-content"></div>
+</main>
+
+<footer class="blog-footer">
+    <p>&copy; 2025 Subesh Yadav</p>
+</footer>
+
+<script>
+    const posts = {
+        1: {
+            title: "Understanding HTML & CSS Fundamentals",
+            category: "Web Development",
+            content: `
+                <p>
+                    HTML and CSS form the foundation of modern web development.
+                    HTML defines the structure of a webpage, while CSS is responsible
+                    for styling, layout, and responsiveness.
+                </p>
+                <h2>Why HTML Matters</h2>
+                <p>
+                    HTML uses semantic tags such as header, nav, article, and footer
+                    to improve accessibility and maintainability.
+                </p>
+                <blockquote>
+                    Well-structured HTML makes styling and scaling easier.
+                </blockquote>
+            `
+        },
+        2: {
+            title: "Introduction to JavaScript Logic",
+            category: "Programming",
+            content: `
+                <p>
+                    JavaScript enables interactivity on the web by allowing developers
+                    to manipulate data, respond to user actions, and control application flow.
+                </p>
+                <h2>Core Concepts</h2>
+                <p>
+                    Variables store data, conditions make decisions, and loops handle repetition.
+                </p>
+                <blockquote>
+                    Logic is the backbone of every interactive application.
+                </blockquote>
+            `
+        },
+        3: {
+            title: "Basics of Computer Networks",
+            category: "Computer Engineering",
+            content: `
+                <p>
+                    Computer networks allow devices to communicate and share data.
+                    They are essential for internet communication and distributed systems.
+                </p>
+                <h2>Networking Types</h2>
+                <p>
+                    LAN connects local devices, while WAN connects systems across cities or countries.
+                </p>
+                <blockquote>
+                    Networking is the invisible infrastructure of the digital world.
+                </blockquote>
+            `
+        }
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const postId = params.get("id");
+
+    if (posts[postId]) {
+        document.getElementById("post-title").innerText = posts[postId].title;
+        document.getElementById("post-category").innerText = posts[postId].category;
+        document.getElementById("post-content").innerHTML = posts[postId].content;
+    } else {
+        document.getElementById("post-title").innerText = "Post Not Found";
+        document.getElementById("post-content").innerHTML = "<p>The requested article does not exist.</p>";
+    }
+</script>
+
+</body>
+</html>
