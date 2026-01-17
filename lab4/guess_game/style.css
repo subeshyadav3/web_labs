@@ -1,0 +1,111 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f9;
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#score {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+
+}
+
+#title {
+
+    color: #333;
+    margin-bottom: 0;
+    position: relative;
+}
+
+#title::after {
+    content: 'Win Against The Computer';
+    position: absolute;
+    display: block;
+    left: 100px;
+    font-size: 0.4em;
+    font-style: italic;
+    color: #666;
+    margin-top: -7px;
+}
+
+
+#game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#inputSection {
+    margin-top: 50px;
+}
+
+#userGuess {
+    width: 200px;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+#submitGuess {
+    padding: 7px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#submitGuess:hover {
+    background-color: #0056b3;
+}
+
+
+#message {
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-style: italic;
+    padding: 5px;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    max-width: 400px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    display: none;
+}
+
+#feedback-title {
+    font-size: 0.7em;
+    color: #2f3640;
+}
+
+#feedback {
+    background-color: #a4b0b8;
+    color: #fff;
+    border-radius: 5px;
+    margin: 0;
+    padding: 2px;
+}
+
+
+#reset {
+
+    padding: 7px 15px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 50px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
