@@ -1,0 +1,81 @@
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    gap: 30px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#clock {
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+    color: #333;
+    gap: 20px;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#timer-display {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 1.2rem;
+    align-items: center;
+}
+
+#timer-input {
+    padding: 10px;
+    font-size: 1.2rem;
+    width: 180px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#timer-show {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007BFF;
+}
+
+#control-btns {
+    display: flex;
+    gap: 10px;
+}
+
+#control-btns button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#control-btns button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
