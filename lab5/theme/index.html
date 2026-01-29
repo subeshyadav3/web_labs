@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Theme Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>Theme Manager</h1>
+
+    <div class="controls">
+      <div class="control">
+        <label>Background Color</label>
+        <input type="color" id="bgColor">
+      </div>
+
+      <div class="control">
+        <label>Text Color</label>
+        <input type="color" id="textColor">
+      </div>
+
+      <div class="control">
+        <label>Button Color</label>
+        <input type="color" id="btnColor">
+      </div>
+    </div>
+
+    <button id="actionBtn">Sample Button</button>
+    <button class="reset" id="resetBtn">Reset Theme</button>
+
+    <div class="text-test">
+        <input
+          type="text"
+          id="textInput"
+          placeholder="Type text to test theme color"
+        />
+        <p id="previewText">Your text will appear here</p>
+      </div>
+      
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

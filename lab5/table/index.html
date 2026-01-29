@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Table Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <h2>Generate Dynamic Table (mxn)</h2>
+    <div class="input-group">
+        <label for="rows">Number of rows (m):</label>
+        <input type="number" id="rows" min="1" value="3">
+        <label for="cols">Number of columns (n):</label>
+        <input type="number" id="cols" min="1" value="3">
+        <button id="generateBtn">Generate Table</button>
+        <div id="controller">
+            <button id="addRowBtn">Add Row</button>
+            <button id="removeRowBtn">Remove Row</button>
+            <button id="highlightEvenBtn">Highlight Even Cells</button>
+        </div>
+    </div>
+    <div id="tableContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
